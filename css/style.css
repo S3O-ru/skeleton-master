@@ -1,0 +1,174 @@
+:root {
+  --color-green: #86B119;
+  --color-black: #2A2A2A;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../fonts/NotoSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../fonts/NotoSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../fonts/NotoSans-Bold.ttf);
+  font-weight: 700;
+}
+body {
+  width: 100%;
+}
+header,
+article,
+footer {
+  width: 100%;
+}
+.contains{
+  width: 100%;
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- menu ------------ */
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: block;
+  width: 109px;
+  /* height: 94px; */
+}
+.logo img {
+  width: 100%;
+}
+.menu-box {
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 80px;
+}
+.menu-box nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 80px;
+}
+.menu-tel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.menu-tel_img {
+  width: 28px;
+  height: 27px;
+}
+.menu-tel_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-tel_num {
+  font-size: 24px;
+  font-weight: 400;
+}
+.menu-active {
+  border-bottom: 2px solid var(--color-green);
+}
+.menu-active a {
+  color: var(--color-green);
+}
+
+/* ------- header ---------- */
+
+header {
+  position: relative;
+  background-image: url(../images/header-fone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+header::after {
+  content: '';
+  background-image: url(../images/header-house.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 100%;
+  top: 150px;
+  right: 0;
+  z-index: -1;
+}
+/* при уменьшении экрана, облака не следуют за сжимающимся домом у которого contain, а не cover. В случае. когда у дома cover они идут вместе по горизонтали, но дом не уменьшается по вертикали */
+header::before {
+  content: '';
+  background-image: url(../images/clouds.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 20%;
+  bottom: 0px;
+  z-index: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heder-desc {
+  padding: 150px 0;
+  z-index: 1;
+}
+.heder-desc_main {
+  font-size: 45px;
+  font-weight: 800;
+  max-width: 660px;
+}
+.heder-desc_dop1, 
+.heder-desc_dop2 {
+  font-size: 20px;
+  padding: 10px 0;
+  font-weight: 400;
+  max-width: 652px;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 10px 30px;
+  max-width: 252px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+  color: white;
+}
+.btn-green {
+  background-color: var(--color-green);
+  border-radius: 50px;
+  border: 1px solid var(--color-green);
+}
+
+.calc {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  right: 256px;
+  top: 100px;
+}
+.calc-pic {
+  background-image: url(../svg/calculator.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
