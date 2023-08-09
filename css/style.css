@@ -190,9 +190,11 @@ header::before {
   z-index: 0;
 }
 .see-form .contains {
+  background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
   padding: 57px;
   border-radius: 14px;
+  z-index: 0;
 }
 .action {
   font-size: 28px;
@@ -224,7 +226,6 @@ header::before {
   width: 261px;
   max-width: 261px;
 }
-/* дерево не ушло под see-form, а при указании z-index у .see-form .contains дерево исчезает  */
 .see-form::before {
   content: '';
   position: absolute;
