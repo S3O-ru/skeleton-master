@@ -279,3 +279,94 @@ header::before {
   width: 90%;
   height: 90%;
 }
+
+/* ------benefits------- */
+
+.benefits {
+  padding-top: 109px;
+}
+.benefits-header {
+  padding: 72px 0 30px;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+.benefits-header span {
+  color: var(--color-green);
+}
+.benefits-content {
+  padding-top: 33px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.benefit {
+  min-width: 430px;
+  width: calc((100% - 20px*2)/3);
+  border-radius: 14px;
+  border: 1px solid rgba(189, 189, 189, 0.50);
+  background: rgba(255, 255, 255, 0.00);
+  display: flex;
+}
+.benefit-pic {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+.pic-one {
+  margin-top: 12px;
+  background-image: url(../svg/1.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-two {
+  margin-top: 12px;
+  background-image: url(../svg/2.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-three {
+  margin-top: 12px;
+  background-image: url(../svg/3.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-four {
+  margin-top: 12px;
+  background-image: url(../svg/4.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-five {
+  margin-top: 12px;
+  background-image: url(../svg/5.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-six {
+  margin-top: 12px;
+  background-image: url(../svg/6.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.benefit-description {
+  padding: 24px;
+  max-width: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.benefit-description-title {
+  font-weight: 800;
+}
+.benefit-description-text {
+  font-size: 14px;
+  color: #767676;
+}
