@@ -134,7 +134,7 @@ header::before {
 }
 .heder-desc {
   width: 60%;
-  padding: 150px 0 250px;
+  padding: 8% 0 15%;
   z-index: 1;
 }
 .heder-desc_main {
@@ -143,7 +143,7 @@ header::before {
   font-weight: 800;
   max-width: 820px;
 }
-.heder-desc_dop1, 
+.heder-desc_dop1,
 .heder-desc_dop2 {
   width: 90%;
   font-size: 20px;
@@ -186,10 +186,12 @@ header::before {
 .see-form {
   position: relative;
   background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 20%, #ffffff 100%);
-  padding-top: 70px;
+  /* padding-top: 70px; */
   z-index: 0;
+  padding: 70px 20px 20px;
 }
 .see-form .contains {
+  position: relative;
   background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
   padding: 57px;
@@ -226,7 +228,23 @@ header::before {
   width: 261px;
   max-width: 261px;
 }
-.see-form::before {
+
+.tree {
+  position: absolute;
+  background-image: url(../images/tree.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: -30px;
+  left: calc((100% - 1400px) / 2 - 100px);
+  /* left: -30px; */
+  z-index: -1;
+}
+/* .see-form::before {
   content: '';
   position: absolute;
   background-image: url(../images/tree.png);
@@ -238,23 +256,22 @@ header::before {
   top: -30px;
   left: -30px;
   z-index: -1;
-}
-/*  Сначала делал ::after, но потом подумал, что было бы здорово перенести мужика вниз до 1030px - он наезжает на форму; но и WRAP не сработал. Добавил WRAP к FORM, так лучше 
+} */
 
-.see-form::after {
+.see-form .contains::after {
   content: '';
   position: absolute;
   background-image: url(../images/form-worker.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  width: 90%;
-  height: 90%;
-  top: 56px;
-  right: -33px;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
   z-index: -1;
 }
-*/
+
 form,
 .see-form-in {
   width: 100%;
@@ -266,7 +283,7 @@ form,
 .form-in-right {
   width: 80%;
 }
-.form-worker {
+/* .form-worker {
   position: absolute;
   width: 388px;
   height: 274px;
@@ -280,12 +297,13 @@ form,
   background-position: right;
   width: 90%;
   height: 90%;
-}
+} */
 
 /* ------benefits------- */
 
 .benefits {
   padding-top: 109px;
+  padding-bottom: 89px;
 }
 .benefits-header {
   padding: 72px 0 30px;
@@ -371,4 +389,166 @@ form,
 .benefit-description-text {
   font-size: 14px;
   color: #767676;
+}
+
+/* --------- scelet --------- */
+
+.scelet {
+  width: 100%;
+  padding: 53px 20px 85px;
+  position: relative;
+  background-image: url(../images/scelet-fone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* z-index: -1; */
+}
+.scelet::after {
+  position: absolute;
+  content: '';
+  background-image: url(../images/scelet-house.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.scelet::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/clouds-scelet01.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+  left: 0;
+  bottom: 90px;
+}
+
+/* Не много не понял, как другие облака добавить, поэтому эти растянул на 100% */
+
+.scelet .contains {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  row-gap: 64px;
+}
+
+.scelet-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+.scelet-title span {
+  color: var(--color-green);
+}
+
+.scelet-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.scelet-content-left,
+.scelet-content-rigth {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+.scelet-content-item {
+  padding: 18px 36px;
+  display: flex;
+  gap: 12px;
+  max-width: 398px;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  transform: skewX(-10deg);
+  z-index: 1;
+}
+.scelet-content-item img,
+.scelet-content-item div {
+  transform: skewX(10deg);
+}
+.scelet .btn {
+  max-width: 506px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* --------features---------- */
+
+.features {
+  width: 100%;
+  position: relative;
+  background-image: url(../images/features-fone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.features-header {
+  padding: 128px 0 72px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+.features-header span {
+  color: var(--color-green);
+}
+.features-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.features-content-item {
+  min-width: 300px;
+  width: calc((100% - 30px*3)/4);
+  border-radius: 14px;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.features-item-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 30px 40px 30px;
+}
+.description-title {
+  display: block;
+  font-weight: 800;
+}
+.description-text {
+  display: block;
+  font-size: 14px;
+  color: #767676;
+}
+.features-item-header {
+  margin: 32px 0 0 36px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.features-item-header-left {
+  height: 56px;
+  width: 56px;
+  background-color: var(--color-green);
+  transform: skewX(-12deg);
+  border-radius: 10px;
+}
+.features-item-header-left img {
+  padding: 8px;
+  transform: skewX(12deg);
+}
+.features-item-header-right {
+  text-align: center;
+  font-size: 69px;
+  color: rgba(0, 0, 0, 0.05);
 }
