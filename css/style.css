@@ -160,9 +160,10 @@ header::before {
   color: white;
 }
 .btn-green {
-  background-color: var(--color-green);
-  border-radius: 50px;
   border: 1px solid var(--color-green);
+  border-radius: 50px;
+  background: linear-gradient(180deg, #96C12A 0%, #84AE19 100%);
+  box-shadow: 0px 4px 4px 0px #63850E;
 }
 
 .calc {
@@ -551,4 +552,134 @@ form,
   text-align: center;
   font-size: 69px;
   color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* ---------catalog----------- */
+
+
+.catalog {
+  width: 100%;
+  background-image: url(../images/catalog-fon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+}
+.catalog-header {
+  text-align: center;
+  padding-top: 159px;
+  font-size: 32px;
+  font-weight: 800;
+}
+.catalog-header span {
+  color: var(--color-green);
+}
+.bathhouses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 19px;
+  padding: 66px 0 92px;
+}
+.bathhouse {
+  min-width: 430px;
+  width: calc((100% - 19px*2)/3);
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  background: #FFF;
+}
+.bathhouse-pic {
+  width: 100%;
+  height: 215px;
+}
+.bathhouse-pic .img {
+ background-image: url(../images/dachnik.png);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+ width: 100%;
+ height: 97%; 
+}
+.bathhouse-content,
+.bathhouse-sale {
+  padding: 0 35px 0 29px;
+}
+.bathhouse-header {
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bathhouse-name {
+  font-size: 18px;
+  font-weight: 800;
+}
+.bathhouse-data {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.bathhouse-person {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.bathhouse-person-pic {
+  width: 16px;
+  height: 16px;
+}
+.bathhouse-person-pic .svg {
+  background-image: url(../svg/user.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.bathhouse-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+.bathhouse-area-pic {
+  width: 16px;
+  height: 16px;
+}
+.bathhouse-area-pic .svg {
+  background-image: url(../svg/area.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.bathhouse-text {
+  padding: 20px 0 30px;
+  color: #767676;
+  font-size: 14px;
+}
+.bathhouse-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 32px;
+} 
+.bathhouse-sale .btn {
+  width: 134px;
+  border-radius: 50px;
+  border: 1px solid #F3F3F3;
+  background: #F3F3F3;
+  color: #A8A8A8;
+  box-shadow: 0px 4px 4px 0px #E9E9E9;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.bathhouse-sale .btn-green {
+  width: 239px;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 8px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #96C12A 0%, #84AE19 100%);
+  box-shadow: 0px 4px 4px 0px #63850E;
+  cursor: pointer;
 }
