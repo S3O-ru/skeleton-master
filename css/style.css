@@ -25,6 +25,7 @@ header,
 article,
 footer {
   width: 100%;
+  overflow: hidden;
 }
 .contains{
   width: 100%;
@@ -402,7 +403,8 @@ form,
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* z-index: -1; */
+  background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 20%, #ffffff 100%);
+  z-index: 0;
 }
 .scelet::after {
   position: absolute;
@@ -415,6 +417,7 @@ form,
   height: 100%;
   left: 0;
   top: 0;
+  z-index: -1;
 }
 .scelet::before {
   position: absolute;
@@ -426,17 +429,34 @@ form,
   width: 100%;
   height: 40%;
   left: 0;
-  bottom: 90px;
+  bottom: 0;
+  z-index: -1;
 }
 
 /* Не много не понял, как другие облака добавить, поэтому эти растянул на 100% */
 
 .scelet .contains {
+  position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   row-gap: 64px;
+  z-index: 0;
+}
+.scelet .contains::after {
+  content: '';
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+  height: 200px;
+  background-image: url(../images/clouds.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  bottom: 50px;
+  z-index: 0;
 }
 
 .scelet-title {
@@ -507,6 +527,7 @@ form,
   gap: 30px;
 }
 .features-content-item {
+  position: relative;
   min-width: 300px;
   width: calc((100% - 30px*3)/4);
   border-radius: 14px;
@@ -515,7 +536,51 @@ form,
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  z-index: 1;
 }
+.features-content-item-box {
+  position: relative;
+  min-width: 300px;
+  width: calc((100% - 30px*3)/4);
+  z-index: 1;
+}
+.features-content-item-box .features-content-item {
+  width: 100%;
+  height: 100%;
+}
+.features-content-item-tree {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+.tree1 {
+  width: 340px;
+  height: 320px;
+  top: -120px;
+  left: -120px;
+  background-image: url(../images/tree-2.png);
+}
+.tree2,
+.tree4 {
+  width: 250px;
+  height: 285px;
+  top: -120px;
+  right: -100px;
+  background-image: url(../images/tree-3.png);
+}
+.tree4 {
+  display: none;
+}
+.tree3 {
+  width: 220px;
+  height: 200px;
+  bottom: -90px;
+  left: -90px;
+  background-image: url(../images/tree-4.png);
+}
+
 .features-item-description {
   display: flex;
   flex-direction: column;
@@ -682,4 +747,204 @@ form,
   background: linear-gradient(180deg, #96C12A 0%, #84AE19 100%);
   box-shadow: 0px 4px 4px 0px #63850E;
   cursor: pointer;
+}
+
+/* ------- video ---------- */
+.video {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #f5f5f2;
+  position: relative;
+  overflow: hidden;
+}
+.video-contains {
+  background-color: white;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 28px;
+  position: relative;
+  z-index: 0;
+}
+.video-contains::after {
+  position: absolute;
+  content: 'Уютный дом 64, будем знакомы!';
+  bottom: 150px;
+  z-index: 1;
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+.video-box {
+  width: 100%;
+}
+.video-box img {
+  width: 100%;
+}
+.video-cloud {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/clouds.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+img.temp {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: calc(50% - 55px);
+  left: calc(50% - 55px);
+}
+.rabochij {
+  position: absolute;
+  width: 350px;
+  height: 100%;
+  bottom: 0;
+  right: -50px;
+  background-image: url(../images/Rabochij.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+/* ------------projects------------- */
+
+.projects {
+  width: 100%;
+  padding: 150px 0;
+  background-color: #f5f5f2;
+}
+.projects-header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+.projects-header span {
+  color: var(--color-green);
+}
+.projects-catalog {
+  padding-top: 67px;
+  display: flex;
+  justify-content: center;
+  gap: 37px;
+  flex-wrap: wrap;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 647px;
+  width: calc((100% - 56px)/2);
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+}
+.projects-pic {
+  position: relative;
+  width: 647px;
+  height: 343px;
+}
+.projects-pic .img {
+  background-image: url(../images/banya01.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.projects-prev {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  bottom: 30px;
+  left: 35px;
+}
+.preview {
+  width: 105px;
+  height: 57px;
+  border-radius: 6px;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+.project-title {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0 34px;
+}
+.project-parametrs {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 0 34px;
+}
+.project-parametrs .text {
+  font-size: 12px;
+  color: #767676;
+}
+.project-parametrs .item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item .pic-right {
+  font-weight: 600;
+}
+.item .pic-left {
+  width: 16px;
+  height: 16px;
+}
+.pic-left .svg {
+  background-image: url(../svg/project-pic.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.project-pic {
+  display: flex;
+  gap: 6px;
+}
+.project-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  padding: 0 34px 34px;
+}
+.see-more {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.see-more-text {
+  font-size: 14px;
+}
+.arrow-svg {
+  width: 22px;
+  height: 15px;
+}
+.arrow {
+  background-image: url(../svg/arrow.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.project-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #EEEEEE;
+  border: 1px solid #EEEEEE;
+}
+.project-btn-top {
+  font-size: 16px;
+  font-weight: 800;
+}
+.project-btn-bottom {
+  font-size: 14px;
 }
