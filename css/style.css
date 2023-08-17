@@ -814,7 +814,7 @@ img.temp {
 .projects {
   width: 100%;
   padding: 150px 0;
-  background-color: #f5f5f2;
+  background-color: #fefefd;
 }
 .projects-header {
   text-align: center;
@@ -947,4 +947,118 @@ img.temp {
 }
 .project-btn-bottom {
   font-size: 14px;
+}
+/* -------reviews-------- */
+
+.reviews {
+  width: 100%;
+  background-image: url(../images/reviews-fon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.reviews-header {
+  background-image: url(../images/before-reviews-fon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 93px;
+  font-size: 32px;
+  font-weight: 800;
+}
+.reviews-header span {
+  color: var(--color-green);
+}
+.reviews-slider {
+  position: relative;
+  width: 100%;
+}
+.reviews-box {
+  padding: 71px 107px;
+}
+.reviews-noborder {
+  padding: 28px 26px;
+  background-color: white;
+  border-radius: 14px;
+}
+.reviews-border {
+  border: 1px solid #F0F0F0;
+  background-color: white;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.reviews-left {
+  max-width: 400px;
+  width: calc(100% / 2);
+  padding: 66px 0 53px 57px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 13px;
+}
+.reviews-left-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+.reviews-left-description {
+  color: #767676;
+}
+.reviews-left-pic {
+  width: 88px;
+  height: 88px;
+  border: 4px dashed #EEEEEE;
+}
+.reviews-right {
+  position: relative;
+  padding-right: 37px;
+}
+img.temp-video {
+  width: 100%;;
+}
+.reviews-right img.temp {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  top: calc(50% - 33px);
+  left: calc(50% - 55px);
+} 
+.slider-arrows {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: calc(50% - 33px);
+  left: 0;
+}
+.arrows-left,
+.arrows-right {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(180.00deg, rgb(150, 193, 42),rgb(132, 174, 25) 100%);
+  box-shadow: 0px 4px 4px 0px rgb(99, 133, 14);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.slider-arrows .svg {
+  position: absolute;
+  width: 14px;
+  height: 26px;
+}
+.arrows-left .svg {
+  background-image: url(../svg/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 22px;
+  left: 23px;
+}
+.arrows-right .svg {
+  background-image: url(../svg/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 22px;
+  right: 23px;
 }
