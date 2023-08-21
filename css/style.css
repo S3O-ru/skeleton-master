@@ -835,7 +835,8 @@ img.temp {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  min-width: 647px;
+  min-width: 460px;
+  /* min-width: 647px; */
   width: calc((100% - 56px)/2);
   background-color: white;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -843,18 +844,19 @@ img.temp {
 }
 .projects-pic {
   position: relative;
-  width: 647px;
-  height: 343px;
+  width: 100%;
+  height: 340px;
 }
 .projects-pic .img {
   background-image: url(../images/banya01.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
 .projects-prev {
   position: absolute;
+  width: calc(100% - 35px * 2);
   display: flex;
   justify-content: space-between;
   gap: 14px;
@@ -1061,4 +1063,113 @@ img.temp-video {
   background-size: contain;
   top: 22px;
   right: 23px;
+}
+/* -------contacty--------- */
+
+.contacty {
+  position: relative;
+  background-image: url(../images/map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 667px;
+}
+.modal-contact {
+  position: absolute;
+  left: 5%;
+  top: 25%;
+}
+.active {
+  position: relative;
+  padding: 46px 0 64px 41px;
+  max-width: 671px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #767676;
+  border-radius: 14px;
+}
+.contact-title {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 800;
+}
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+  padding: 39px 72px 0 0;
+}
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.contact-item_box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-item_label {
+  color: #767676;
+  font-size: 12px;
+}
+.contact-item_text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.contact-item_text span {
+  display: block;
+  width: 16px;
+  height: 22px;
+}
+.map-ico {
+  background-image: url(../svg/map01.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.contact-close {
+  position: absolute;
+  font-size: 60px;
+  transform: rotate(45deg);
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.karta {
+  position: relative;
+  left: 1172px;
+  bottom: 70px;
+  cursor: pointer;
+}
+/* ---------footer--------- */
+
+.footer {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.logo-footer {
+  padding: 26px 0;
+}
+.menu-footer nav {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  white-space: nowrap;
+}
+.copy-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  color: #767676;
 }
