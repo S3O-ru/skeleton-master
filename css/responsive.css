@@ -1,0 +1,127 @@
+@media (max-width: 1030px) {
+    /* ----------меню---------- */
+    .menu-box nav {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .burger-line {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 69px;
+        height: 69px;
+        gap: 6px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    /* При изменении ширины экрана плоски бургера немножко меняют свою высоту, притом по разному  */
+    .burger-line li {
+        list-style-type: none;
+        width: 29px;
+        height: 3px;
+        background-color: #86B119;
+    }
+    /* ------------header------------ */
+    .header-elements {
+        display: none;
+    }
+    .heder-desc_main {
+        font-size: 26px;
+    }
+    .heder-desc_dop1,
+    .heder-desc_dop2 {
+        font-size: 14px;
+    }
+
+      /* -------- see-form ------- */
+    
+    .see-form .contains {
+        max-width: 778px;
+      }
+    .tree {
+        max-width: 778px;
+        top: -10px;
+        left: calc((100% - 778px) / 2 - 100px);
+    }
+    .see-form .contains::after {
+        display: none;
+    }
+    .action {
+        font-size: 18px;
+        font-weight: 800;
+    }
+    .see-form form {
+        
+    }
+    .form-in-left {
+        width: 100%;
+    }
+    .see-form input {
+        width: 320px;
+        max-width: 320px;
+    }
+    
+    /* ------benefits------- */
+
+    .benefits .contains {
+        max-width: 778px;
+    }
+    .benefits-header {
+        font-size: 22px;
+    }
+    .benefits-content {
+        gap:18px;
+    }
+    .benefit {
+        min-width: 360px;
+        width: calc((100% - 18px*2)/2);
+    } 
+    .benefit-pic {
+        margin: 10px;
+        width: 53px;
+        height: 49px;
+    }
+    .benefit-description {
+        padding: 11px;
+        max-width: 283px;
+        gap: 10px;
+    }
+    .benefit-description-title {
+        font-size: 14px;
+    }
+    /* --------- scelet --------- */
+    
+    .scelet {
+        padding: 53px 20px 600px;
+    }
+    .scelet .contains {
+        max-width: 778px;
+    }
+    .scelet-title {
+        font-size: 21px;
+        font-weight: 800;
+    }
+    .scelet-content-item {
+        max-width: 306px;
+    }
+    .scelet-content-text {
+        font-size: 14px;
+    }
+    .scelet::after {
+        top: 170px;
+    }
+    .scelet::before {
+        bottom: 136px;
+    }
+    .scelet .contains::after {
+        width: 130%;
+        bottom: -494px;
+    }
+    .scelet .btn {
+        position: absolute;
+        bottom: -520px;
+    }
+}

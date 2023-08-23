@@ -89,7 +89,9 @@ footer {
 .menu-active a {
   color: var(--color-green);
 }
-
+.burger {
+  display: none;
+}
 /* ------- header ---------- */
 
 header {
