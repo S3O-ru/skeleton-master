@@ -1067,6 +1067,9 @@ img.temp-video {
   top: 22px;
   right: 23px;
 }
+.bubble {
+  display: none;
+}
 /* -------contacty--------- */
 
 .contacty {
