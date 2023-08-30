@@ -561,6 +561,9 @@ header::after {
 .scelet {
   padding: 0px 20px 100px;
 }
+.scelet .btn {
+    bottom: -90px;
+}
 .bathhouse-name {
   font-size: 14px;
 }
