@@ -17,6 +17,7 @@
   src: url(../fonts/NotoSans-Bold.ttf);
   font-weight: 700;
 }
+
 body {
   width: 100%;
   font-family: 'NotoSans';
@@ -117,7 +118,6 @@ header::after {
   right: 0;
   z-index: -1;
 }
-/* при уменьшении экрана, облака не следуют за сжимающимся домом у которого contain, а не cover. В случае. когда у дома cover они идут вместе по горизонтали, но дом не уменьшается по вертикали */
 header::before {
   content: '';
   background-image: url(../images/clouds.png);
@@ -434,8 +434,6 @@ form,
   bottom: 0;
   z-index: -1;
 }
-
-/* Не много не понял, как другие облака добавить, поэтому эти растянул на 100% */
 
 .scelet .contains {
   position: relative;
@@ -867,7 +865,7 @@ img.temp {
   position: absolute;
   width: calc(100% - 35px * 2);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 14px;
   bottom: 30px;
   left: 35px;
@@ -1116,7 +1114,7 @@ img.temp-video {
   border: 1px solid #767676;
   border-radius: 14px;
 }
-.active {
+.modal-contact.active {
   display: block;
 }
 .contact-title {
