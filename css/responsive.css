@@ -482,7 +482,7 @@
   .project-title,
   .project-parametrs,
   .project-bottom {
-    padding: 12px 34px;
+    padding: 5px 34px;
 }
 .project-parametrs {
   flex-wrap: wrap;
@@ -781,7 +781,17 @@ header::after {
 .modal-contact {
   padding-bottom: 30px;
 }
-
+.bathhouse-header {
+  flex-direction: column;
+  gap: 10px;
+}
+.bathhouse-sale {
+  flex-direction: column;
+}
+.bathhouse-sale .btn,
+.bathhouse-sale .btn-green {
+  width: 200px;
+}
 }
 
 @media (max-width: 350px) {
@@ -860,10 +870,6 @@ header::before {
 .video-cloud {
   height: 68px;
 }
-.bathhouse-header {
-  flex-direction: column;
-  gap: 10px;
-}
 .bathhouse-name {
   font-size: 14px;
 }
@@ -893,12 +899,11 @@ header::before {
   font-size: 12px;
 }
 /* Слева от описания скролл, как его реализовать? */
+.bathhouse-text {
+  height: 100px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: 20px 0;
+}
 
-.bathhouse-sale {
-  flex-direction: column;
-}
-.bathhouse-sale .btn,
-.bathhouse-sale .btn-green {
-  width: 200px;
-}
 }
